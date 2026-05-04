@@ -1,0 +1,32 @@
+# Sensitive Files - Never Commit
+openclaw.json
+*.env
+.env*
+
+# Private Knowledge Base
+knowledge/
+docs/private/
+company-docs/
+
+# API Keys and Credentials
+**/*key*
+**/*token*
+**/*secret*
+
+# Memory and Logs (may contain sensitive info)
+memory/
+logs/
+*.log
+
+# OS and Editor Files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+.npm/
+.yarn/

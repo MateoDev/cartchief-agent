@@ -107,6 +107,80 @@ Create `~/.openclaw/openclaw.json` — never commit this file, it contains your 
 }
 ```
 
+## Knowledge Base Setup
+
+CartChief's effectiveness comes from having access to your company's context and documentation. Here's how to set up the knowledge base without exposing sensitive data:
+
+### 🔒 Private Document Management
+
+**What CartChief Needs Access To:**
+- Company policies and procedures
+- Product documentation and roadmaps
+- Team processes and workflows
+- Strategic documents and OKRs
+- Historical decisions and context
+
+**✅ Secure Setup Options:**
+
+#### Option 1: XO RAG/VectorDB (Recommended)
+- Upload documents directly to your XO instance dashboard
+- Documents stay private to your agent instance
+- Automatic embedding and retrieval
+- No code repository involved
+
+#### Option 2: Local Knowledge Base
+- Store documents in `knowledge/` directory (add to `.gitignore`)
+- Use OpenClaw's memory system for context
+- Keep sensitive files local only
+
+#### Option 3: Private Document References
+- Create `KNOWLEDGE_INDEX.md` with document titles/topics
+- Store actual documents in private Google Drive/Notion
+- Agent can ask you to retrieve specific documents when needed
+
+### 📝 Document Categories for CartChief
+
+Create this structure in your private knowledge base:
+
+```
+knowledge/
+├── company/
+│   ├── mission-vision-values.md
+│   ├── organizational-chart.md
+│   └── company-policies.md
+├── products/
+│   ├── share-a-cart-overview.md
+│   ├── technical-architecture.md
+│   └── roadmap-2024.md
+├── processes/
+│   ├── development-workflow.md
+│   ├── release-process.md
+│   └── meeting-cadence.md
+├── partnerships/
+│   ├── evm-capital-agreement.md
+│   ├── affiliate-programs.md
+│   └── vendor-relationships.md
+└── metrics/
+    ├── kpi-definitions.md
+    ├── reporting-schedule.md
+    └── dashboard-links.md
+```
+
+### 🚨 Security Guidelines
+
+**Never commit to public repos:**
+- Customer data or PII
+- Financial information
+- API keys or credentials
+- Internal strategy documents
+- Legal agreements or contracts
+
+**Safe to include in repos:**
+- Process templates (without specific data)
+- Configuration examples
+- Public-facing documentation
+- General workflow descriptions
+
 ## Agent Initialization
 
 On first run, DM CartChief in Slack from your admin account and tell it:

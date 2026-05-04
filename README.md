@@ -6,11 +6,39 @@ CartChief handles PM work, internal communications, team coordination, and helps
 
 ## What CartChief Does
 
-- **Project Management** — Track initiatives, coordinate timelines, manage deliverables
-- **Internal Communications** — Team updates, meeting coordination, status reports
-- **Strategic Support** — EVM Capital partnership execution, growth initiatives
-- **Agent Workflows** — Help the team build and deploy custom automations
-- **Technical Coordination** — Bridge business and technical requirements
+### Cart Operations
+- Create carts from natural language requests
+- Retrieve carts by ID and merge multiple carts
+- Monitor cart activity across 200+ supported retailers
+- Delete carts and manage cart lifecycle
+
+### Org Intelligence (Slack)
+- Post 9am daily digest to `#all-sac` (what shipped, what's blocked, key metrics)
+- Post morning CEO briefing to `#priv-exec` (cart vol, MRR delta, one blocker)
+- Surface open PRs, roadmap items, and build queue in `#priv-engineering`
+- Answer questions about API docs, MCP specs, and SAC architecture in `#priv-dataroom`
+
+### Customer Outreach
+- Draft outbound prospect emails in `#priv-gtm` for human approval before send
+- Execute approved sends via `#agent-community-mgr`
+- Log replies and surface warm leads back to the GTM channel
+- Suggest follow-up responses based on reply content
+
+### Analytics
+- Pull and summarize Google Analytics — traffic, conversions, top referrers
+- Pull and summarize Shopify analytics — orders, revenue, top products
+- Monitor cart creation and share activity across the 200+ supported retailers
+- Flag anomalies (drops in cart vol, traffic spikes, approval backlogs)
+
+### Subscription & Billing
+- Check subscription offer eligibility by store, plan tier, and cart value
+- Surface upgrade prompts for Pro-eligible users
+
+### Admin / Org Management
+- List and filter org users by role
+- Submit carts for approval and route to the right approver
+- Approve or reject carts with notes
+- Pull org-level cart analytics by date range, requester, or vendor
 
 CartChief is triggered via:
 
@@ -157,7 +185,6 @@ knowledge/
 │   ├── release-process.md
 │   └── meeting-cadence.md
 ├── partnerships/
-│   ├── evm-capital-agreement.md
 │   ├── affiliate-programs.md
 │   └── vendor-relationships.md
 └── metrics/
@@ -200,7 +227,12 @@ This initializes CartChief's context. Team members can then interact with it for
 | `USER.md` | Team context, member info, confidentiality rules |
 | `IDENTITY.md` | Agent name, role, emoji branding |
 | `HEARTBEAT.md` | Proactive monitoring and background task config |
-| `TOOLS.md` | Environment-specific notes and team tool references |
+| `TOOLS.md` | SAC-specific endpoints, credentials, and configuration |
+| `CARTCHIEF_PERSISTENT.md` | MCP connection rules, tool usage, and output formats |
+| `CHANNELS.md` | Slack channel strategy, posting rules, and escalation |
+| `OUTREACH.md` | Email workflows, approval process, and lead management |
+| `ANALYTICS.md` | Analytics integration, monitoring, and anomaly detection |
+| `knowledge/metrics/` | KPI definitions, reporting schedules, and dashboard links |
 | `memory/` | Daily logs and persistent memory files |
 
 ## Team Automation Capabilities

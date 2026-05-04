@@ -3,8 +3,9 @@ openclaw.json
 *.env
 .env*
 
-# Private Knowledge Base
-knowledge/
+# Private Knowledge Base - but allow template structure
+knowledge/**/*.md
+!knowledge/metrics/*.md
 docs/private/
 company-docs/
 
